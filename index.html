@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raj's Interview Prep — .NET & DSA</title>
+  <meta name="description" content="Personal .NET / C# and DSA interview practice portal." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="assets/css/highlight.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button id="menuBtn" class="icon-btn" aria-label="Toggle navigation">☰</button>
+    <a class="brand" href="#/">
+      <span class="brand-mark">🎯</span>
+      <span class="brand-text">Interview Prep</span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <button id="themeBtn" class="icon-btn" aria-label="Toggle theme" title="Toggle light / dark">🌙</button>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar">
+      <nav id="nav" class="nav"><!-- built by app.js --></nav>
+      <div class="sidebar-footer">
+        <div class="progress-mini">
+          <div class="progress-mini-label">
+            <span>Overall progress</span>
+            <span id="progressMiniPct">0%</span>
+          </div>
+          <div class="progress-track"><div id="progressMiniBar" class="progress-fill"></div></div>
+        </div>
+      </div>
+    </aside>
+    <div id="backdrop" class="backdrop"></div>
+
+    <main class="content">
+      <article id="article" class="article">
+        <div class="loader">Loading…</div>
+      </article>
+      <footer class="content-footer">
+        Built from Raj's study notes · Hosted on Netlify · Progress saved in this browser
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/js/marked.min.js"></script>
+  <script src="assets/js/highlight.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

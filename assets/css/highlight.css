@@ -1,0 +1,32 @@
+/* highlight.js theme driven by CSS variables (defined per data-theme in style.css) */
+.hljs            { color: var(--hl-base); background: transparent; }
+.hljs-comment,
+.hljs-quote      { color: var(--hl-comment); font-style: italic; }
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag        { color: var(--hl-keyword); }
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-attribute,
+.hljs-literal,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-addition   { color: var(--hl-string); }
+.hljs-number,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-deletion   { color: var(--hl-number); }
+.hljs-title.function_,
+.hljs-title.class_,
+.hljs-function .hljs-title { color: var(--hl-func); }
+.hljs-variable,
+.hljs-params,
+.hljs-property   { color: var(--hl-var); }
+.hljs-emphasis   { font-style: italic; }
+.hljs-strong     { font-weight: 700; }

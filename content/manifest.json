@@ -1,0 +1,41 @@
+{
+  "home": {
+    "id": "start-here",
+    "title": "Start Here",
+    "file": "00-START-HERE.md"
+  },
+  "tracks": [
+    {
+      "key": "A",
+      "label": "Track A — .NET / C#",
+      "icon": "🟦",
+      "steps": [
+        {
+          "id": "step-01-csharp-fundamentals",
+          "title": "Step 01 — C# Fundamentals",
+          "topic": "C# Fundamentals",
+          "file": "Step-01-CSharp-Fundamentals.md"
+        },
+        {
+          "id": "step-02-oop-in-csharp",
+          "title": "Step 02 — OOP in C#",
+          "topic": "OOP in C#",
+          "file": "Step-02-OOP-in-CSharp.md"
+        }
+      ]
+    },
+    {
+      "key": "B",
+      "label": "Track B — DSA",
+      "icon": "🟧",
+      "steps": [
+        {
+          "id": "dsa-step-01-bigo-and-arrays",
+          "title": "DSA Step 01 — Big-O & Arrays",
+          "topic": "Big-O & Arrays basics",
+          "file": "DSA-Step-01-BigO-and-Arrays.md"
+        }
+      ]
+    }
+  ]
+}
