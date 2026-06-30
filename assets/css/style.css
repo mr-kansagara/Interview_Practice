@@ -136,7 +136,6 @@ a:hover { text-decoration: underline; }
   transition: background var(--transition), border-color var(--transition);
 }
 .icon-btn:hover { border-color: var(--accent); background: var(--accent-soft); }
-#menuBtn { display: none; }
 
 /* ---------- Layout ---------- */
 .layout {
@@ -156,6 +155,13 @@ a:hover { text-decoration: underline; }
   display: flex;
   flex-direction: column;
   padding: 14px 12px;
+  transition: margin-left var(--transition);
+}
+
+/* Desktop: ☰ collapses the sidebar so the article gets more reading width */
+@media (min-width: 861px) {
+  body.sidebar-collapsed .sidebar { margin-left: calc(-1 * var(--sidebar-w)); }
+  body.sidebar-collapsed .article { max-width: 1040px; }
 }
 
 .nav { flex: 1; }
@@ -188,23 +194,46 @@ a:hover { text-decoration: underline; }
   border-color: color-mix(in srgb, var(--accent) 40%, transparent);
   font-weight: 600;
 }
-.nav-link .nav-check {
+.nav-link .nav-title { flex: 1; min-width: 0; }
+.nav-link .nav-prog {
   margin-left: auto;
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--text-faint);
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border-soft);
+  border-radius: 99px;
+  padding: 1px 7px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.nav-link .nav-prog:empty { display: none; }
+.nav-link .nav-prog.full {
+  color: var(--tip-icon);
+  background: var(--tip-bg);
+  border-color: var(--tip-border);
+}
+.nav-link .nav-check {
   font-size: .8rem;
   color: var(--tip-icon);
   opacity: 0;
+  display: none;
 }
-.nav-link.done .nav-check { opacity: 1; }
 .nav-home { font-weight: 600; color: var(--text); }
 
 .sidebar-footer {
   border-top: 1px solid var(--border-soft);
   padding: 14px 10px 4px;
 }
+.track-progress { display: flex; flex-direction: column; gap: 14px; }
 .progress-mini-label {
-  display: flex; justify-content: space-between;
+  display: flex; justify-content: space-between; gap: 8px;
   font-size: .76rem; color: var(--text-dim); margin-bottom: 7px;
 }
+.progress-mini-label > span:first-child {
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.progress-mini-label > span:last-child { font-weight: 700; color: var(--text); }
 .progress-track {
   height: 8px; border-radius: 99px;
   background: var(--bg-elev-2);
@@ -259,9 +288,14 @@ a:hover { text-decoration: underline; }
   margin: 0 0 26px;
 }
 .dash-hero h2 { margin: 0 0 4px; font-size: 1rem; border: 0; padding: 0; }
-.dash-hero .dash-sub { color: var(--text-dim); font-size: .88rem; margin-bottom: 14px; }
+.dash-hero .dash-sub { color: var(--text-dim); font-size: .88rem; margin-bottom: 16px; }
 .dash-hero .progress-track { height: 12px; }
 .dash-hero .dash-count { font-weight: 700; color: var(--accent); }
+.dash-track + .dash-track { margin-top: 16px; }
+.dash-track-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: .9rem; font-weight: 600; margin-bottom: 8px;
+}
 
 /* ---------- Typography ---------- */
 .article h1 {
@@ -431,6 +465,38 @@ h2.section-check    { background: var(--check-bg);    border-left: 4px solid var
 .task-item label { cursor: pointer; }
 .task-item input:checked + label { color: var(--text-faint); text-decoration: line-through; }
 
+/* ---------- Per-question completion checkbox (on Q / Scenario headings) ---------- */
+.article h3.q-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+.article h3.q-head .q-check {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px; height: 20px;
+  margin: 3px 0 0;
+  flex: 0 0 auto;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-elev);
+  cursor: pointer;
+  position: relative;
+  transition: background var(--transition), border-color var(--transition);
+}
+.article h3.q-head .q-check:hover { border-color: var(--accent); }
+.article h3.q-head .q-check:checked {
+  background: var(--tip-border);
+  border-color: var(--tip-border);
+}
+.article h3.q-head .q-check:checked::after {
+  content: "✓";
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: .82rem; font-weight: 700;
+}
+.article h3.q-done { color: var(--text-faint); }
+
 /* ---------- Step nav (prev / next) ---------- */
 .step-nav {
   display: flex;
@@ -457,29 +523,39 @@ h2.section-check    { background: var(--check-bg);    border-left: 4px solid var
 .step-nav .sn-title { font-weight: 600; font-size: .92rem; }
 .step-nav .spacer { flex: 1; background: none; border: 0; }
 
-/* mark-done button on step pages */
-.markdone-bar {
-  display: flex; align-items: center; gap: 12px;
-  margin: 4px 0 22px;
-  padding: 12px 16px;
-  border: 1px dashed var(--border);
-  border-radius: var(--radius-sm);
+/* per-question progress header on step pages */
+.step-progress {
+  margin: 4px 0 26px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   background: var(--bg-elev);
 }
-.markdone-bar .md-text { color: var(--text-dim); font-size: .9rem; flex: 1; }
+.step-progress .sp-row {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: 10px;
+}
+.step-progress .sp-title { font-weight: 600; font-size: .92rem; color: var(--text); }
+.step-progress .sp-count { font-size: .92rem; color: var(--text-dim); }
+.step-progress .sp-count b { color: var(--accent); font-size: 1.05rem; }
+.step-progress .progress-track { height: 10px; }
+.step-progress .sp-actions { display: flex; gap: 8px; margin-top: 12px; }
+.step-progress.complete { border-color: var(--tip-border); background: var(--tip-bg); }
+.step-progress.complete .sp-count b { color: var(--tip-icon); }
+
 .btn {
   border: 1px solid var(--accent-2);
   background: var(--accent-2);
   color: #fff;
   padding: 8px 16px;
   border-radius: var(--radius-sm);
-  font-weight: 600; font-size: .88rem;
+  font-weight: 600; font-size: .85rem;
   cursor: pointer;
-  transition: filter var(--transition);
+  transition: filter var(--transition), border-color var(--transition), background var(--transition);
 }
 .btn:hover { filter: brightness(1.08); }
-.btn.ghost { background: transparent; color: var(--text); border-color: var(--border); }
-.markdone-bar.is-done { border-style: solid; border-color: var(--tip-border); background: var(--tip-bg); }
+.btn.ghost { background: transparent; color: var(--text-dim); border-color: var(--border); }
+.btn.ghost:hover { color: var(--text); border-color: var(--accent); background: var(--accent-soft); filter: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
