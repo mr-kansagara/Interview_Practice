@@ -21,6 +21,12 @@
           "title": "Step 02 — OOP in C#",
           "topic": "OOP in C#",
           "file": "Step-02-OOP-in-CSharp.md"
+        },
+        {
+          "id": "step-03-csharp-advanced",
+          "title": "Step 03 — C# Advanced",
+          "topic": "Delegates, events, generics",
+          "file": "Step-03-CSharp-Advanced.md"
         }
       ]
     },
@@ -34,6 +40,12 @@
           "title": "DSA Step 01 — Big-O & Arrays",
           "topic": "Big-O & Arrays basics",
           "file": "DSA-Step-01-BigO-and-Arrays.md"
+        },
+        {
+          "id": "dsa-step-02-strings",
+          "title": "DSA Step 02 — Strings",
+          "topic": "Working with text",
+          "file": "DSA-Step-02-Strings.md"
         }
       ]
     }

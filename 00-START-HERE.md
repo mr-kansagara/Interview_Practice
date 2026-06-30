@@ -32,7 +32,7 @@ You practice **two tracks in parallel**:
 |---|------|-------|--------|
 | 1 | Step-01 | C# Fundamentals | ✅ Ready |
 | 2 | Step-02 | OOP in C# | ✅ Ready |
-| 3 | Step-03 | C# Advanced (delegates, events, generics) | ⏳ Locked |
+| 3 | Step-03 | C# Advanced (delegates, events, generics) | ✅ Ready |
 | 4 | Step-04 | LINQ & async/await | ⏳ Locked |
 | 5 | Step-05 | .NET Core Fundamentals (DI, middleware) | ⏳ Locked |
 | 6 | Step-06 | ASP.NET Core Web API & MVC | ⏳ Locked |
@@ -47,22 +47,30 @@ You practice **two tracks in parallel**:
 
 ---
 
-## 🗺️ Track B — DSA Roadmap (12 steps, solved in C#)
+## 🗺️ Track B — DSA Roadmap (beginner-friendly, 12 steps, solved in C#)
 
-| # | Step | Topic | Status |
-|---|------|-------|--------|
-| 1 | DSA-Step-01 | Big-O & Arrays basics | ✅ Ready |
-| 2 | DSA-Step-02 | Strings | ⏳ Locked |
-| 3 | DSA-Step-03 | Searching & Sorting | ⏳ Locked |
-| 4 | DSA-Step-04 | Hashing (Dictionary / HashSet) | ⏳ Locked |
-| 5 | DSA-Step-05 | Two Pointers & Sliding Window | ⏳ Locked |
-| 6 | DSA-Step-06 | Linked Lists | ⏳ Locked |
-| 7 | DSA-Step-07 | Stacks & Queues | ⏳ Locked |
-| 8 | DSA-Step-08 | Recursion & Backtracking | ⏳ Locked |
-| 9 | DSA-Step-09 | Trees & Binary Search Trees | ⏳ Locked |
-| 10 | DSA-Step-10 | Heaps / Priority Queue | ⏳ Locked |
-| 11 | DSA-Step-11 | Graphs (BFS / DFS) | ⏳ Locked |
-| 12 | DSA-Step-12 | Dynamic Programming | ⏳ Locked |
+> **New to DSA? Don't worry.** This track starts from *"what even is an array?"* and builds up
+> one small step at a time. Every step = **one data structure or technique** + **easy C# problems**
+> that use it, all explained in plain English. Do them in order — each one uses the last.
+
+| # | Step | What you'll learn (plain English) | Status |
+|---|------|-----------------------------------|--------|
+| 1 | DSA-Step-01 | What DSA even is, how to measure if code is fast or slow (**Big-O**), and **arrays** (rows of items) | ✅ Ready |
+| 2 | DSA-Step-02 | **Strings** — working with text: reversing, palindromes, anagrams, counting characters | ✅ Ready |
+| 3 | DSA-Step-03 | **Searching** (finding things) & **Sorting** (putting things in order), incl. binary search | ⏳ Locked |
+| 4 | DSA-Step-04 | **Hashing** — `Dictionary` & `HashSet`, the "instant lookup" trick that makes code fast | ⏳ Locked |
+| 5 | DSA-Step-05 | **Two Pointers & Sliding Window** — scanning arrays/strings efficiently | ⏳ Locked |
+| 6 | DSA-Step-06 | **Linked Lists** — data joined together like a chain of train carriages | ⏳ Locked |
+| 7 | DSA-Step-07 | **Stacks & Queues** — last-in-first-out (plates) & first-in-first-out (a line) | ⏳ Locked |
+| 8 | DSA-Step-08 | **Recursion & Backtracking** — a method that calls itself to solve smaller pieces | ⏳ Locked |
+| 9 | DSA-Step-09 | **Trees & Binary Search Trees** — data that branches like a family tree | ⏳ Locked |
+| 10 | DSA-Step-10 | **Heaps / Priority Queue** — always grab the smallest or largest item fast | ⏳ Locked |
+| 11 | DSA-Step-11 | **Graphs (BFS / DFS)** — networks of connections (maps, friend lists) | ⏳ Locked |
+| 12 | DSA-Step-12 | **Dynamic Programming** — solve big problems by reusing answers to small ones | ⏳ Locked |
+
+> 💡 **How the difficulty builds:** Steps 1–2 are the absolute basics (arrays, strings). Steps 3–5
+> teach the core *techniques* you'll reuse everywhere. Steps 6–12 introduce new data structures,
+> getting gradually harder. By the end you'll recognize the common interview patterns on sight.
 
 ---
 
@@ -113,4 +121,4 @@ You practice **two tracks in parallel**:
 
 ---
 
-👉 **Next action:** Continue with `Step-02-OOP-in-CSharp.md` (Tech) and start `DSA-Step-01-BigO-and-Arrays.md` (DSA).
+👉 **Next action:** Continue with `Step-03-CSharp-Advanced.md` (Tech) and start `DSA-Step-01-BigO-and-Arrays.md` (DSA).

@@ -12,8 +12,9 @@
   var LS_TASKS    = "prep.tasks";         // { taskKey: true }  (in-content GFM task lists)
   var LS_COLLAPSE = "prep.navCollapsed";  // "1" | "0"  (desktop sidebar)
 
-  // a heading counts as a trackable "question" when it starts with Q<n> or Scenario <n>
-  var Q_RE = /^(Q\d+|Scenario\s+\d+)/i;
+  // a heading counts as a trackable "question" when it starts with
+  // Q<n> (tech Q&A), Problem <n> (DSA coding problems), or Scenario <n>
+  var Q_RE = /^(Q\d+|Problem\s+\d+|Scenario\s+\d+)/i;
 
   var manifest = null;
   var flatSteps = [];                // ordered list of step objects across tracks
