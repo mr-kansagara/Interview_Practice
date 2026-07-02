@@ -33,7 +33,7 @@ You practice **two tracks in parallel**:
 | 1 | Step-01 | C# Fundamentals | ✅ Ready |
 | 2 | Step-02 | OOP in C# | ✅ Ready |
 | 3 | Step-03 | C# Advanced (delegates, events, generics) | ✅ Ready |
-| 4 | Step-04 | LINQ & async/await | ⏳ Locked |
+| 4 | Step-04 | LINQ & async/await | ✅ Ready |
 | 5 | Step-05 | .NET Core Fundamentals (DI, middleware) | ⏳ Locked |
 | 6 | Step-06 | ASP.NET Core Web API & MVC | ⏳ Locked |
 | 7 | Step-07 | Entity Framework Core | ⏳ Locked |
@@ -57,7 +57,7 @@ You practice **two tracks in parallel**:
 |---|------|-----------------------------------|--------|
 | 1 | DSA-Step-01 | What DSA even is, how to measure if code is fast or slow (**Big-O**), and **arrays** (rows of items) | ✅ Ready |
 | 2 | DSA-Step-02 | **Strings** — working with text: reversing, palindromes, anagrams, counting characters | ✅ Ready |
-| 3 | DSA-Step-03 | **Searching** (finding things) & **Sorting** (putting things in order), incl. binary search | ⏳ Locked |
+| 3 | DSA-Step-03 | **Searching** (finding things) & **Sorting** (putting things in order), incl. binary search | ✅ Ready |
 | 4 | DSA-Step-04 | **Hashing** — `Dictionary` & `HashSet`, the "instant lookup" trick that makes code fast | ⏳ Locked |
 | 5 | DSA-Step-05 | **Two Pointers & Sliding Window** — scanning arrays/strings efficiently | ⏳ Locked |
 | 6 | DSA-Step-06 | **Linked Lists** — data joined together like a chain of train carriages | ⏳ Locked |
@@ -121,4 +121,4 @@ You practice **two tracks in parallel**:
 
 ---
 
-👉 **Next action:** Continue with `Step-03-CSharp-Advanced.md` (Tech) and start `DSA-Step-01-BigO-and-Arrays.md` (DSA).
+👉 **Next action:** Work through `Step-04-LINQ-and-Async.md` (Tech) and `DSA-Step-03-Searching-and-Sorting.md` (DSA).
